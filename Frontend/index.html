@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EAMCET College Predictor</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="SK_logo.png" type="image/x-icon">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ <!-- Font Awesome -->
+<!-- Font Awesome Free CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+</head>
+<body>
+<h1 data-aos="fade-down">EAMCET College  Predictor</h1>
+<div class="container" data-aos="zoom-in-up">
+  <div class="form-group">
+    <label for="rank">EAMCET Rank</label>
+    <input type="number" id="rank" placeholder="Enter your rank">
+  </div>
+  <div class="form-group">
+    <label for="category">Category</label>
+    <select id="category">
+      <option value="">Select Category</option>
+      <option value="OC">OC</option>
+      <option value="BC_A">BC_A</option>
+      <option value="BC_B">BC_B</option>
+      <option value="BC_C">BC_C</option>
+      <option value="BC_D">BC_D</option>
+      <option value="BC_E">BC_E</option>
+      <option value="SC">SC</option>
+      <option value="ST">ST</option>
+      <option value="EWS">EWS GEN OU </option>
+      <option value="EWS">EWS GIRLS OU
+</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="gender">Gender</label>
+    <select id="gender">
+      <option value="">Select Gender</option>
+      <option value="BOYS">BOYS</option>
+      <option value="GIRLS">GIRLS</option>
+      <option value="GEN OU">EWS 
+GEN OU
+</option>
+      <option value="GIRLS OU">EWS 
+GIRLS OU
+</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="branch">Branch</label>
+    <select id="branch">
+      <option value="">Select Branch</option>
+      <option value="COMPUTER SCIENCE AND ENGINEERING">CSE- COMPUTER SCIENCE AND ENGINEERING</option>
+      <option value="COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)">CSM- COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)
+</option>
+      <option value="COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)">CSD-COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)
+</option>
+      <option value="COMPUTER SCIENCE AND ENGINEERING (CYBER SECURITY)">CSC-COMPUTER SCIENCE AND ENGINEERING (CYBER SECURITY)</option>
+      <option value="ELECTRONICS AND COMMUNICATION ENGINEERING">ECE</option>
+      <option value="ELECTRONICS COMMUNICATION AND INSTRUMENTATION ENGINEERING
+">ECI - ELECTRONICS COMMUNICATION AND INSTRUMENTATION ENGINEERING
+</option>
+<option value="ELECTRONICS AND INSTRUMENTATION ENGINEERING
+">EIE- ELECTRONICS AND INSTRUMENTATION ENGINEERING
+</option>
+      <option value="ELECTRONICS AND COMPUTER ENGINEERING">ELECTRONICS AND COMPUTER ENGINEERING</option>
+      <option value="ELECTRICAL AND ELECTRONICS ENGINEERING">EEE</option>
+      <option value="MECHANICAL ENGINEERING">Mechanical</option>
+      <option value="CIVIL ENGINEERING">Civil</option>
+      <option value="ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING">AIM(ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)</option>
+      <option value="ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING">(AID)ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</option>
+      <option  value="COMPUTER SCIENCE AND BUSINESS SYSTEM">COMPUTER SCIENCE AND BUSINESS SYSTEM</option>
+       <option value="INFORMATION TECHNOLOGY">IT</option>
+       <option value="CSE (IoT AND CYBER SECURITY INCLUDING BLOCK CHAIN TECHNOLOGY)">CIC (CSE-IoT AND CYBER SECURITY INCLUDING BLOCK CHAIN TECHNOLOGY)</option>
+       <option value="MINING ENGINEERING">MINING ENGINEERING(MIN)</option>
+         <option value="BIO-MEDICAL ENGINEERING">BIO-MEDICAL ENGINEERING(BME)</option>
+         <option value="PHARMACEUTICAL ENGINEERING">PHARMACEUTICAL ENGINEERING(PHE)</option>
+         <option value="AGRICULTURAL ENGINEERING">AGRICULTURAL ENGINEERING(AGR)</option>
+         <option value="BIO-TECHNOLOGY">BIO-TECHNOLOGY(BIO)</option>
+         <option value="CHEMICAL ENGINEERING">CHEMICAL ENGINEERING(CHE)</option>
+         <option value="DAIRYING">DAIRYING</option>
+          <option value="FOOD TECHNOLOGY">FOOD TECHNOLOGY(FDT)</option>
+           <option value="COMPUTER SCIENCE & DESIGN">(CSG)COMPUTER SCIENCE & DESIGN</option>
+           <option value="COMPUTER SCIENCE AND ENGINEERING (IOT)">CSO-COMPUTER SCIENCE AND ENGINEERING (IOT)</option>
+             <option value="BUILDING SERVICES ENGG">BUILDING SERVICES ENGG(BSE)</option>
+              <option value="DIGITAL TECHNIQUES FOR DESIGN AND PLANNING">DTD-DIGITAL TECHNIQUES FOR DESIGN AND PLANNING</option>
+              <option value="B.PLANNING">PLG- B.PLANNING</option>
+               <option value="GEO INFORMATICS">GEO- GEO INFORMATICS</option>
+               <option value="METALLURGICAL ENGINEERING">METALLURGICAL ENGINEERING</option>
+                <option value="BTECH MECHANICAL WITH MTECH MANUFACTURING  SYSTEMS">MMS- BTECH MECHANICAL WITH MTECH MANUFACTURING  SYSTEMS</option>
+                 <option value="BTECH MECHANICAL WITH MTECH THERMAL ENGG">BTECH MECHANICAL WITH MTECH THERMAL ENGG</option>
+                 <option value="TEXTILE TECHNOLOGY / TEXTILE ENGINEERING">TEX-TEXTILE TECHNOLOGY / TEXTILE ENGINEERING</option>
+                   <option value="AERONAUTICAL ENGINEERING
+">AERONAUTICAL ENGINEERING
+</option>
+    </select>
+  </div>
+  <button id="submitButton">Predict Colleges</button>
+</div>
+<div class="loading">
+  <div class="spinner"></div>
+  <p>Loading....</p>
+</div>
+<div id="results" data-aos="fade-up"></div>
+<footer class="footer" data-aos="fade-up">
+  <p>
+    CRAFTED WITH <i style="color: rgb(226, 36, 43) ; font-size: 1.1rem;" class="fa-solid fa-heart"></i> BY <a style="color:rgb(255, 90, 95) ;" href="https://www.instagram.com/__srinu__01__/">__srinu__01__</a>
+    <div>
+    <a href="https://www.instagram.com/__srinu__01__/" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram" style="font-size: 1.6rem;"></i>
+    </a>
+    &nbsp;&nbsp;
+    <a href="https://www.linkedin.com/in/srinu-boddupally" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin" style="font-size: 1.6rem;"></i>
+    </a>
+    </div>
+  </p>
+</footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+</script>
+<script src="script.js"></script>
+</body>
+
